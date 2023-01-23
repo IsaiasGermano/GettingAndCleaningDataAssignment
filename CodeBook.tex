@@ -1,0 +1,519 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={CodeBook.md},
+  pdfauthor={Isaias Machado},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{CodeBook.md}
+\author{Isaias Machado}
+\date{2023-01-23}
+
+\begin{document}
+\maketitle
+
+\hypertarget{week-4-assignment}{%
+\section{Week 4 Assignment}\label{week-4-assignment}}
+
+\hypertarget{code-book}{%
+\subsection{Code book}\label{code-book}}
+
+id -\textgreater{} Person identification Identify the person who
+participated of the experiment as volunteer within an age bracket of
+19-48 years.
+
+\begin{verbatim}
+  0 .. 30 -> Valid values. 
+  
+\end{verbatim}
+
+Description -\textgreater{} Differs the activities (Type of movement)
+that describe the experiment.
+
+\begin{verbatim}
+           1. WALKING
+           2. WALKING_UPSTAIRS 
+           3. WALKING_DOWNSTAIRS, 
+           4. SITTING, 
+           5. STANDING, 
+           6. LAYING  
+\end{verbatim}
+
+timeBodyAcc-mean()-X -\textgreater{} Mean of time domain signal of body
+accelerometer at X axis.
+
+\begin{verbatim}
+                    Maximum value: 0.3 Hz
+\end{verbatim}
+
+timeBodyAcc-mean()-Y -\textgreater{} Mean of time domain signal of body
+accelerometer at Y axis.
+
+\begin{verbatim}
+                    Maximum value: 0.3 Hz
+\end{verbatim}
+
+timeBodyAcc-mean()-Z -\textgreater{} Mean of time domain signal of body
+accelerometer at Z axis.
+
+\begin{verbatim}
+                    Maximum value: 0.3 Hz
+\end{verbatim}
+
+timeBodyAcc-std()-X -\textgreater{} Standard deviation of time domain of
+body accelerometer at X axis.
+
+\begin{verbatim}
+                    Unit: Hz
+\end{verbatim}
+
+timeBodyAcc-std()-Y -\textgreater{} Standard deviation of time domain of
+body accelerometer at Y axis.
+
+\begin{verbatim}
+                    Unit: Hz
+                    
+\end{verbatim}
+
+timeBodyAcc-std()-Z -\textgreater{} Standard deviation of time domain of
+body accelerometer at Z axis.
+
+\begin{verbatim}
+                    Unit: Hz
+                    
+\end{verbatim}
+
+timeGravityAcc-mean()-X -\textgreater{} Mean of time domain of gravity
+accelerometer at X axis.
+
+\begin{verbatim}
+                    Unit: g
+\end{verbatim}
+
+timeGravityAcc-mean()-Y -\textgreater{} Mean of time domain of gravity
+accelerometer at Y axis.
+
+\begin{verbatim}
+                    Unit: g
+                    
+\end{verbatim}
+
+timeGravityAcc-mean()-Z -\textgreater{} Mean of time domain of gravity
+accelerometer at Z axis.
+
+\begin{verbatim}
+                    Unit: g
+                    
+\end{verbatim}
+
+timeGravityAcc-std()-X -\textgreater{} Standard deviation of time domain
+of gravity accelerometer at X axis.
+
+\begin{verbatim}
+                    Unit: g
+                    
+\end{verbatim}
+
+timeGravityAcc-std()-Y -\textgreater{} Standard deviation of time domain
+of gravity accelerometer at Y axis.
+
+\begin{verbatim}
+                    Unit: g
+                    
+\end{verbatim}
+
+timeGravityAcc-std()-Z -\textgreater{} Standard deviation of time domain
+of gravity accelerometer at Z axis.
+
+\begin{verbatim}
+                    Unit: g
+                    
+\end{verbatim}
+
+timeBodyAccJerk-mean()-X -\textgreater{} Mean of signal derived from
+body linear acceleration and angular velocity at X axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyAccJerk-mean()-Y -\textgreater{} Mean of signal derived from
+body linear acceleration and angular velocity at Y axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyAccJerk-mean()-Z -\textgreater{} Mean of signal derived from
+body linear acceleration and angular velocity at Z axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+                    
+\end{verbatim}
+
+timeBodyAccJerk-std()-X -\textgreater{} Standard deviation signal
+derived from body linear acceleration and angular velocity at X axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+                    
+\end{verbatim}
+
+timeBodyAccJerk-std()-Y -\textgreater{} Standard deviation signal
+derived from body linear acceleration and angular velocity at Y axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+                    
+\end{verbatim}
+
+timeBodyAccJerk-std()-Z -\textgreater{} Standard deviation signal
+derived from body linear acceleration and angular velocity at Z axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+                    
+\end{verbatim}
+
+timeBodyGyro-mean()-X -\textgreater{} Mean of time domain of body
+gyroscope at X axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyro-mean()-Y -\textgreater{} Mean of time domain of body
+gyroscope at Y axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyro-mean()-Z -\textgreater{} Mean of time domain of body
+gyroscope at Z axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyro-std()-X -\textgreater{} Standar deviation of time domain of
+body gyroscope at X axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyro-std()-Y -\textgreater{} Standar deviation of time domain of
+body gyroscope at Y axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyro-std()-Z -\textgreater{} Standar deviation of time domain of
+body gyroscope at Z axis.
+
+\begin{verbatim}
+                    Unit: -
+\end{verbatim}
+
+timeBodyGyroJerk-mean()-X -\textgreater{} Mean of jerk signal derived
+from body gyroscope at X axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyGyroJerk-mean()-Y -\textgreater{} Mean of jerk signal derived
+from body gyroscope at Y axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyGyroJerk-mean()-Z -\textgreater{} Mean of jerk signal derived
+from body gyroscope at Z axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyGyroJerk-std()-X -\textgreater{} Standard deviation of jerk
+signal derived from body gyroscope at X axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyGyroJerk-std()-Y -\textgreater{} Standard deviation of jerk
+signal derived from body gyroscope at Y axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyGyroJerk-std()-Z -\textgreater{} Standard deviation of jerk
+signal derived from body gyroscope at Z axis.
+
+\begin{verbatim}
+                    Unit: m/s³
+\end{verbatim}
+
+timeBodyAccMag-mean() -\textgreater{} Body acceleration signal mean of
+the magnitude of accelerometer signals were calculated using the
+Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+                    
+\end{verbatim}
+
+timeBodyAccMag-std() -\textgreater{} Body acceleration signal Standard
+deviation of the magnitude of accelerometer signals were calculated
+using the Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeGravityAccMag-mean() -\textgreater{} Gravity acceleration signal
+Mean of the magnitude of accelerometer signals were calculated using the
+Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeGravityAccMag-std() -\textgreater{} Gravity acceleration signal
+standard deviation of the magnitude of accelerometer signals were
+calculated using the Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyAccJerkMag-mean() -\textgreater{} Body acceleration signal mean
+of the Jerk magnitude of accelerometer signals were calculated using the
+Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyAccJerkMag-std() -\textgreater{} Body acceleration signal
+standard deviation of the Jerk magnitude of accelerometer signals were
+calculated using the Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyGyroMag-mean() -\textgreater{} Body acceleration signal mean of
+the magnitude of gyroscope signals were calculated using the Euclidean
+norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyGyroMag-std() -\textgreater{} Body acceleration signal mean of
+the magnitude of gyroscope signals were calculated using the Euclidean
+norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyGyroJerkMag-mean() -\textgreater{} Body acceleration signal mean
+of the jerk magnitude of gyroscope signals were calculated using the
+Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+timeBodyGyroJerkMag-std() -\textgreater{} Body acceleration signal
+standard deviation of the jerk magnitude of gyroscope signals were
+calculated using the Euclidean norm.
+
+\begin{verbatim}
+                    Unit: m/s²
+\end{verbatim}
+
+frequenceBodyAcc-mean()-X -\textgreater{} Body's accelerometer frequency
+domain signal mean at X axis
+
+frequenceBodyAcc-mean()-Y -\textgreater{} Body's accelerometer frequency
+domain signal mean at Y axis
+
+frequenceBodyAcc-mean()-Z -\textgreater{} Body's accelerometer frequency
+domain signal mean at Z axis
+
+frequenceBodyAcc-std()-X -\textgreater{} Body's accelerometer frequency
+domain signal standard deviation at X axis
+
+frequenceBodyAcc-std()-Y -\textgreater{} Body's accelerometer frequency
+domain signal standard deviation at Y axis
+
+frequenceBodyAcc-std()-Z -\textgreater{} Body's accelerometer frequency
+domain signal standard deviation at Z axis
+
+frequenceBodyAcc-meanFreq()-X -\textgreater{} Body's accelerometer
+frequency domain signal mean frequence at X axis
+
+frequenceBodyAcc-meanFreq()-Y -\textgreater{} Body's accelerometer
+frequency domain signal mean frequence at Y axis
+
+frequenceBodyAcc-meanFreq()-Z -\textgreater{} Body's accelerometer
+frequency domain signal mean frequence at Z axis
+
+frequenceBodyAccJerk-mean()-X -\textgreater{} Body's accelerometer
+frequency domain signal jerk mean at X axis
+
+frequenceBodyAccJerk-mean()-Y -\textgreater{} Body's accelerometer
+frequency domain signal jerk mean at Y axis
+
+frequenceBodyAccJerk-mean()-Z -\textgreater{} Body's accelerometer
+frequency domain signal jerk mean at Z axis
+
+frequenceBodyAccJerk-std()-X -\textgreater{} Body's accelerometer
+frequency domain signal jerk standard deviation at X axis
+
+frequenceBodyAccJerk-std()-Y -\textgreater{} Body's accelerometer
+frequency domain signal jerk standard deviation at Y axis
+
+frequenceBodyAccJerk-std()-Z -\textgreater{} Body's accelerometer
+frequency domain signal jerk standard deviation at Z axis
+
+frequenceBodyAccJerk-meanFreq()-X -\textgreater{} Body's accelerometer
+frequency domain signal jerk mean frequence at X axis
+
+frequenceBodyAccJerk-meanFreq()-Y-\textgreater{} Body's accelerometer
+frequency domain signal jerk mean frequence at Y axis
+
+frequenceBodyAccJerk-meanFreq()-Z-\textgreater{} Body's accelerometer
+frequency domain signal jerk mean frequence at Z axis
+
+frequenceBodyGyro-mean()-X -\textgreater{} Body's gyroscope frequency
+domain signal mean at X axis
+
+frequenceBodyGyro-mean()-Y -\textgreater{} Body's gyroscope frequency
+domain signal mean at Y axis
+
+frequenceBodyGyro-mean()-Z -\textgreater{} Body's gyroscope frequency
+domain signal mean at Z axis
+
+frequenceBodyGyro-std()-X -\textgreater{} Body's gyroscope frequency
+domain signal standard deviation at X axis
+
+frequenceBodyGyro-std()-Y -\textgreater{} Body's gyroscope frequency
+domain signal standard deviation at Y axis
+
+frequenceBodyGyro-std()-Z -\textgreater{} Body's gyroscope frequency
+domain signal standard deviation at Z axis
+
+frequenceBodyGyro-meanFreq()-X -\textgreater{} Body's gyroscope
+frequency domain signal mean frequence at X axis
+
+frequenceBodyGyro-meanFreq()-Y -\textgreater{} Body's gyroscope
+frequency domain signal mean frequence at Y axis
+
+frequenceBodyGyro-meanFreq()-Z -\textgreater{} Body's gyroscope
+frequency domain signal mean frequence at Z axis
+
+frequenceBodyAccMag-mean() -\textgreater{} Body's accelerometer
+magnitude frequency domain signal mean
+
+frequenceBodyAccMag-std() -\textgreater{} Body's accelerometer magnitude
+frequency domain signal standard deviation
+
+frequenceBodyAccMag-meanFreq() -\textgreater{} Body's accelerometer
+magnitude frequency domain signal mean frequence
+
+frequenceBodyBodyAccJerkMag-mean() -\textgreater{} Body's accelerometer
+jerk magnitude frequency domain signal mean
+
+frequenceBodyBodyAccJerkMag-std() -\textgreater{} Body's accelerometer
+jerk magnitude frequency domain signal standard deviation
+
+frequenceBodyBodyAccJerkMag-meanFreq() -\textgreater{} Body's
+accelerometer jerk magnitude frequency domain signal mean frequence
+
+frequenceBodyBodyGyroMag-mean() -\textgreater{} Body's gyroscope
+magnitude frequency domain signal mean
+
+frequenceBodyBodyGyroMag-std() -\textgreater{} Body's gyroscope
+magnitude frequency domain signal standard deviation
+
+frequenceBodyBodyGyroMag-meanFreq() -\textgreater{} Body's gyroscope
+magnitude frequency domain signal mean frequence
+
+frequenceBodyBodyGyroJerkMag-mean() -\textgreater{} Body's gyroscope
+jerk magnitude frequency domain signal mean
+
+frequenceBodyBodyGyroJerkMag-std() -\textgreater{} Body's gyroscope jerk
+magnitude frequency domain signal standard deviation
+
+frequenceBodyBodyGyroJerkMag-meanFreq()'' -\textgreater{} Body's
+gyroscope jerk magnitude frequency domain signal mean frequence
+
+\end{document}
