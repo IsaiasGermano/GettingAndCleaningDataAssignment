@@ -11,17 +11,21 @@ The data was downloaded from <http://https://d396qusza40orc.cloudfront.net/getda
 
 ## Loading data into dataframes
 
-Then, the files were converted to data.frames.
+The files were converted to data.frames.
 
 ### train
 subjectTrain <- read.table('train/subject_train.txt', header = TRUE)
-    xTrain <- read.table('train/X_train.txt', header = TRUE)
-    yTrain <- read.table('train/y_train.txt', header = TRUE)
+
+xTrain <- read.table('train/X_train.txt', header = TRUE)
+    
+yTrain <- read.table('train/y_train.txt', header = TRUE)
 
 
 ### test
 subjectTest <- read.table('test/subject_test.txt', header = TRUE)
+
 xTest <- read.table('test/X_test.txt', header = TRUE)
+
 yTest <- read.table('test/y_test.txt', header = TRUE)
 
 Afterwards, the data.frames of the same group were join thogether using the cbind command.
@@ -1196,7 +1200,9 @@ lookup_table <- data.frame(Activity =c(1,2,3,4,5,6),
                            ))
 
 buffer <- merge(extractedDf, lookup_table, by="Activity")
+
 buffer2 <- relocate(buffer, Description, .after = 'id')
+
 buffer3 <- buffer2 %>% select(-Activity)
 
 names(buffer3) <- sub('^t', 'time', names(buffer3))
