@@ -5,11 +5,11 @@ date: "2023-01-23"
 output: html_document
 ---
 
-## The data
+# The data
 
 The data was downloaded from <http://https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>.
 
-# Loading data into dataframes
+## Loading data into dataframes
 
 Then, the files were converted to data.frames.
 
